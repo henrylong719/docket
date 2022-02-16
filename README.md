@@ -1,6 +1,6 @@
 # Docket
 
-A react project just for fun 😊
+A full stack web application just for fun 😊
 
 Will be using:
 
