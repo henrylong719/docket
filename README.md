@@ -1,6 +1,6 @@
 # Docket
 
-A small project just for fun 😊
+A react project just for fun 😊
 
 Will be using:
 
