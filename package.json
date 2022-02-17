@@ -1,19 +1,22 @@
 {
   "name": "docket",
-  "version": "1.0.0",
-  "description": "a react project just for fun",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/henrylong719/Docket.git"
+  "dependencies": {
+    "next": "12.0.10",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
-  "author": "Henry Long",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/henrylong719/Docket/issues"
-  },
-  "homepage": "https://github.com/henrylong719/Docket#readme"
+  "devDependencies": {
+    "@types/node": "17.0.18",
+    "@types/react": "17.0.39",
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.0.10",
+    "typescript": "4.5.5"
+  }
 }
