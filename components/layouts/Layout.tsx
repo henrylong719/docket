@@ -30,6 +30,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       menuIcon: BeakerIcon,
     },
     {
+      href: '/notes',
+      title: 'Notes',
+      menuIcon: BeakerIcon,
+    },
+    {
       href: '/contact',
       title: 'Contact',
       menuIcon: BeakerIcon,

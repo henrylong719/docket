@@ -5,7 +5,9 @@ import Layout from '../components/layouts/Layout';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
-      <Component {...pageProps} />
+      <div className="p-8">
+        <Component {...pageProps} />
+      </div>
     </Layout>
   );
 }
