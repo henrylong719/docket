@@ -7,6 +7,7 @@ import {
   DocumentTextIcon,
   HomeIcon,
   IdentificationIcon,
+  PresentationChartBarIcon,
   ViewListIcon,
 } from '@heroicons/react/outline';
 
@@ -23,9 +24,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const menuItems: MenuItem[] = [
     {
-      href: '/',
-      title: 'Home',
-      menuIcon: HomeIcon,
+      href: '/dashboard',
+      title: 'Dashboard',
+      menuIcon: PresentationChartBarIcon,
     },
     {
       href: '/todo',
@@ -68,7 +69,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   <Link href={item.href}>
                     <a
                       className={` flex  rounded-lg p-2 bg-gray-200 hover:bg-gray-500 cursor-pointer ${
-                        router.asPath === item.href && 'bg-gray-500 text-white'
+                        router.asPath.includes(item.href) &&
+                        'bg-gray-500 text-white'
                       }`}
                     >
                       <item.menuIcon className="w-5 h-5 ml-11 mr-4" />
