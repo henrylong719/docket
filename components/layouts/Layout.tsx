@@ -1,6 +1,14 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { BeakerIcon } from '@heroicons/react/outline';
+import {
+  BeakerIcon,
+  ClipboardListIcon,
+  CogIcon,
+  DocumentTextIcon,
+  HomeIcon,
+  IdentificationIcon,
+  ViewListIcon,
+} from '@heroicons/react/outline';
 
 import React from 'react';
 
@@ -17,27 +25,28 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     {
       href: '/',
       title: 'Home',
-      menuIcon: BeakerIcon,
+      menuIcon: HomeIcon,
     },
     {
-      href: 'todo',
+      href: '/todo',
       title: 'Todo',
-      menuIcon: BeakerIcon,
+      menuIcon: ViewListIcon,
+    },
+
+    {
+      href: '/notes',
+      title: 'Notes',
+      menuIcon: DocumentTextIcon,
     },
     {
       href: '/about',
       title: 'About',
-      menuIcon: BeakerIcon,
+      menuIcon: IdentificationIcon,
     },
     {
-      href: '/notes',
-      title: 'Notes',
-      menuIcon: BeakerIcon,
-    },
-    {
-      href: '/contact',
-      title: 'Contact',
-      menuIcon: BeakerIcon,
+      href: '/settings',
+      title: 'Settings',
+      menuIcon: CogIcon,
     },
   ];
 
@@ -47,20 +56,22 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         Next.js sidebar menu
       </header> */}
       <div className="flex flex-col md:flex-row flex-1">
-        <aside className="bg-fuchsia-100 w-full md:w-60">
+        <aside className="bg-gray-200 w-full md:w-60">
           <nav>
             <ul>
-              <li>Docket</li>
+              <li className="flex justify-center mt-10 text-2xl  mb-8">
+                <ClipboardListIcon className="h-8 w-8" />
+                <span>DOCKET</span>
+              </li>
               {menuItems.map((item) => (
                 <li className="m-2" key={item.title}>
                   <Link href={item.href}>
                     <a
-                      className={` flex p-2 bg-fuchsia-200 rounded hover:bg-fuchsia-400 cursor-pointer ${
-                        router.asPath === item.href &&
-                        'bg-fuchsia-600 text-white'
+                      className={` flex  rounded-lg p-2 bg-gray-200 hover:bg-gray-500 cursor-pointer ${
+                        router.asPath === item.href && 'bg-gray-500 text-white'
                       }`}
                     >
-                      <item.menuIcon className="w-5 h-5 mr-2" />
+                      <item.menuIcon className="w-5 h-5 ml-11 mr-4" />
                       {item.title}
                     </a>
                   </Link>
