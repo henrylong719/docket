@@ -4,9 +4,9 @@ A full stack web application just for fun 😊
 
 Will be using:
 
-#### Next.js
+#### React.js
 
-#### Tailwind CSS
+### typescript
 
 #### Apollo GraphQL
 
@@ -17,9 +17,3 @@ Will be using:
 #### PostgreSQL
 
 #### Docker
-
-
-
-https://dribbble.com/shots/15597994-Trembo-Dashboard-Exploration
-
-
